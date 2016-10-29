@@ -15,7 +15,8 @@
     }
   ],
   "scripts": {
-    "start": "node app.js"
+    "dev": "NODE_ENV=development node app.js",
+    "prod": "NODE_ENV=production node app.js"
   },
   "license": "MIT",
   "dependencies": {
