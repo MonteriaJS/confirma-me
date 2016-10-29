@@ -8,9 +8,9 @@ const bodyParser        = require('body-parser');
 const pug               = require('pug');
 const io                = require('socket.io')(server);
 
+app.use(express.static(`${__dirname}/assets`));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 
 app.engine('pug', pug.renderFile);
 app.set('views', './views');
