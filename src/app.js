@@ -11,6 +11,7 @@ import session      from 'express-session';
 import methodOverride from 'method-override';
 import cookieParser from 'cookie-parser';
 import {passport as PassportController} from './controllers/passport';
+import rootDir from 'app-root-dir';
 
 PassportController(passport);
 
@@ -31,7 +32,7 @@ io(server);
  * 
 */
 if ( app.get('env') === 'development') {
-    app.use(express.static(`${__dirname}/assets`));
+    app.use(express.static(`${rootDir.get()}/assets`));
 }
 
 app.use(bodyParser.urlencoded({ extended: false }));
