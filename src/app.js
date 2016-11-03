@@ -14,7 +14,7 @@ import {passport as PassportController} from './controllers/passport';
 import rootDir from 'app-root-dir';
 
 PassportController(passport);
-
+console.log("Hello world");
 mongoose.connect(config.db, ( err, res ) => {
     if (err) console.log(`DB: Error al conectar ${err}`);
     console.log('DB: Conectado.');
