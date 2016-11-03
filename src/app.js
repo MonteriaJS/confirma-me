@@ -33,6 +33,7 @@ io(server);
 */
 if ( app.get('env') === 'development') {
     app.use(express.static(`${rootDir.get()}/assets`));
+    app.set('view cache', false);
 }
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -48,7 +49,6 @@ app.use(passport.session());
 app.use(Routes);
 
 //Configuramos nuestro motor de vistas: pug
-app.set('view cache', false);
 app.engine('pug', pug.renderFile);
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'pug');

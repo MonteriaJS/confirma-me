@@ -20,7 +20,8 @@ export function passport (passport) {
         clientID: config.facebook.id,
         clientSecret: config.facebook.secret,
         callbackURL: '/auth/facebook/callback',
-        profileFields: ['id', 'displayName', 'photos', 'emails']
+        profileFields: ['id', 'displayName', 'photos', 'emails'],
+        enableProof: true
     }, (accessToken, refreshToken, profile, done) => {
         User.findOne({id: profile.id}, (err, user) => {
             if (err) throw(err);
