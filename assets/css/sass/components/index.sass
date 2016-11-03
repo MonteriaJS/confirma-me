@@ -63,3 +63,58 @@
 				align-self: center
 				&:hover
 					color: white
+
+.step-by-step
+	display: flex
+	flex-direction: column
+	width: 80%
+	margin: 0 auto
+	padding: 1rem 0 6rem
+	&__title
+		padding-bottom: .5rem
+		text-align: center
+		margin-bottom: 3rem
+		border-bottom: 1px solid #dedede
+	&__container
+		display: flex
+		&__one, &__two, &__three, &__four
+			text-align: center
+			&__logo
+				color: white
+				background-color: $accent-color
+				padding: 1rem
+				border-radius: 50%
+				font-size: 5rem
+			&__title
+				margin: .5rem 0 0
+				font-weight: 600
+			&__description
+				margin: .5rem 0 0
+
+.sponsors
+	color: white
+	display: flex
+	flex-direction: column
+	background-color: #212121
+	padding: 1rem 0 4rem	
+	&__title
+		padding-bottom: .5rem
+		text-align: center
+		margin: 2rem auto 1rem
+		border-bottom: 1px solid #343434
+		width: 80%
+	&__description
+		text-align: center
+		margin: 0 auto
+		width: 50%
+	&__container
+		margin: 1rem 0
+		padding: .8rem 0
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: #fff
+		&__one, &__two, &__three, &__four
+			margin: 0 1rem
+			&__logo
+				width: 5rem

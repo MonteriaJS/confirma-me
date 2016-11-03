@@ -48,6 +48,7 @@ app.use(passport.session());
 app.use(Routes);
 
 //Configuramos nuestro motor de vistas: pug
+app.set('view cache', false);
 app.engine('pug', pug.renderFile);
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'pug');

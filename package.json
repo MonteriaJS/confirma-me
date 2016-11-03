@@ -17,7 +17,7 @@
   "scripts": {
     "build": "babel src --out-dir bin",
     "prepare": "rm -f -R bin && mkdir bin && cp -R src/views bin/views",
-    "run-dev": "yarn prepare && yarn build && NODE_ENV=development node bin/app.js",
+    "run-dev": "yarn prepare && yarn build && NODE_ENV=development nodemon bin/app.js -e pug",
     "run-prod": "yarn prepare && NODE_ENV=production node bin/app.js"
   },
   "license": "MIT",
