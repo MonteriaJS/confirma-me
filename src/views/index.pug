@@ -3,23 +3,20 @@ extends layout.pug
 block content
 	.overlay
 	
-	header.header
-		h1.header__title CONFIRMA-ME
-	p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-	|tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-	|quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-	|consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-	|cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-	|proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	if(user)
-		ul
-			li
-				img(src=user.photo)
-			li Hola de nuevo, #{user.name}
-			li Tu Correo: #{user.email}
-			li
-				a(href='logout') Salir
-	else
-		ul
-			li
-				a(href='auth/facebook') Iniciar sesion
+	header.header.z-depth-1
+		div.header__content
+			h1.header__content__title ¿Disfrutas la tecnología?
+			p.header__content__description Sólo tienes que elegir el evento al que quieres asistir, confirmar tu asistencia y listo!
+			if(!user)
+				a.btn.waves-light.waves-effect.header__content__login(href="auth/facebook")
+						i.material-icons.left thumb_up
+						| Entrar con facebook
+		div.header__next-event
+			div.header__next-event__content-ico
+				i.material-icons.header__next-event__content-ico__ico event
+			div.header__next-event__content-info
+				h4.header__next-event__content-info__title ReactJS: Redux and Flux!
+				p.header__next-event__content-info__date 23 de Noviembre 2016
+				a.btn.waves-light.waves-effect.header__next-event__content-info__confirmame(href="")
+					i.material-icons.left star
+					| Confirmar Asistencia

@@ -8,3 +8,18 @@ nav.menu
 			a.menu__list__item__link(href="#") FAQ
 		li.menu__list__item
 			a.menu__list__item__link(href="http://meetup.com/monteriajs") CONTÁCTANOS
+	
+	if(user)
+		ul.menu__login.right
+			li.menu__login__dropdown
+				a.menu__login__dropdown__button.dropdown-button(href="#" data-activates="options-login")
+					div.menu__login__dropdown__button__avatar(style=`background-image: url(${user.photo});`)
+					span.menu__login__dropdown__button__name #{user.name}
+					i.material-icons.right keyboard_arrow_down
+			
+			ul#options-login.dropdown-content
+				li
+					a(href="/") Mi Perfil
+				div.divider
+				li
+					a(href="logout") Cerrar Sesión

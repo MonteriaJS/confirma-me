@@ -15,5 +15,6 @@ gulp.task('sass', function () {
 
 gulp.task('sass:watch', function () {
 	refresh.listen()
-	gulp.watch('./assets/css/sass/main.sass', ['sass'])
+	gulp.watch('./assets/css/sass/components/*.sass', ['sass'])
+	gulp.watch('./assets/css/sass/*.sass', ['sass'])
 });
